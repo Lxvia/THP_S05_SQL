@@ -1,0 +1,23 @@
+CREATE TABLE 'students' (
+    'id' 'id' INTEGER PRIMARY KEY AUTOINCREMENT,
+    'name' TEXT 
+    'classe_id' INTEGER UNIQUE,
+    FOREIGN KEY('classe_id') REFERENCES 'classes'('id')
+)
+
+CREATE TABLE 'classes' (
+    'id' INTEGER PRIMARY KEY AUTOINCREMENT,
+    'title' TEXT,
+    'description' INTEGER
+);
+
+CREATE TABLE 'lessons' (
+    'id' INTEGER PRIMARY KEY AUTOINCREMENT,
+    'title' TEXT,
+    'body' TEXT,
+    'classe_id' INTEGER
+    FOREIGN KEY ('classe_id') REFERENCES 'classes'('id')
+);
+
+
+
